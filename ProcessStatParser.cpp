@@ -178,6 +178,18 @@ int ProcessStatParser::Reflush()
 	return 0;
 }
 
+int ProcessStatParser::GetStatInfo(int Pid, stProcessStat &Info)
+{
+	std::map<int,stProcessStat>::iterator iter = m_ProcessStatS.find(Pid);
+	if(iter!=m_ProcessStatS.end())
+	{
+		Info = iter->second;
+		return 0;
+	}
+
+	return -1;
+}
+
 
 
 

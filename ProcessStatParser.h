@@ -54,6 +54,9 @@ public:
 	int RemovePid(int Pid);
 
 	int Reflush();
+
+	int GetStatInfo(int Pid, stProcessStat &Info);
+	
 };
 
 
